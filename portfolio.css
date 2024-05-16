@@ -1,0 +1,189 @@
+/* Reset CSS */
+body, h1, h2, h3, p, ul, li, form, label, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Cambria, sans-serif; /* Change font to Cambria */
+    line-height: 1.6;
+    background-color: #fff; /* White background for entire webpage */
+    color: #111; /* Dark text color */
+    padding: 20px; /* Moderate padding for large screens */
+  }
+  
+  header {
+    background-color: #555; /* Ashy gray background */
+    color: #fff; /* White text color */
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #999; /* Lighter gray border */
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  nav {
+    display: flex;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: #0a0; /* Darker shade of green */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #0f0; /* Neon green */
+  }
+  
+  .menu-toggle {
+    display: none;
+    cursor: pointer;
+  }
+  
+  section {
+    padding: 100px 20px 20px;
+    border: 1px solid #aaa; /* Light gray border around sections */
+    margin-bottom: 20px;
+    background: linear-gradient(to bottom, #555 0%, #fff 100%); /* Gradient background from ashy gray to white */
+  }
+  
+  section h2 {
+    margin-bottom: 50px;
+  }
+  
+  .portfolio-item {
+    margin-bottom: 50px;
+  }
+  
+  .portfolio-item img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  form {
+    border: 1px solid #aaa; /* Light gray border around form */
+    padding: 20px;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  form input[type="text"],
+  form input[type="email"],
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #333;
+    border: none;
+    color: #fff;
+  }
+  
+  form input[type="text"]:focus,
+  form input[type="email"]:focus,
+  form textarea:focus {
+    outline: none;
+  }
+  
+  form button {
+    padding: 10px 20px;
+    background-color: #0f0; /* Neon green */
+    color: #111;
+    border: none;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #0a0; /* Darker shade of green */
+  }
+  
+  footer {
+    background-color: #555; /* Ashy gray background for footer */
+    color: #0f0; /* Neon green text color */
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: -100px; /* Initially hide footer */
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #0f0; /* Neon green border */
+    transition: bottom 0.3s ease; /* Smooth transition animation */
+  }
+  
+  /* Show footer on scroll */
+  body.show-footer footer {
+    bottom: 0;
+  }
+
+  /* Media query for screens under 600px */
+  @media (max-width: 600px) {
+    nav ul {
+      display: none; /* Hide navigation menu on small screens */
+      flex-direction: column;
+      position: absolute;
+      top: 60px; /* Adjust according to your header height */
+      right: 0;
+      background-color: #555;
+      width: 100%;
+    }
+  
+    nav ul.active {
+      display: flex; /* Show navigation menu when toggle is active */
+    }
+  
+    nav ul li {
+      text-align: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #888;
+    }
+  
+    .menu-toggle {
+      display: block; /* Show menu toggle button on small screens */
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      color: #fff;
+      font-size: 24px;
+    }
+  }
+  
+/* Hide dropdown menu by default */
+.dropdown-menu {
+  display: none;
+}
+
+/* Show dropdown menu when placeholder is clicked */
+.nav-placeholder.clicked .dropdown-menu {
+  display: block;
+}
+
+/* Hide nav links on screens less than 600px */
+@media (min-width: 600px) {
+  .nav-links {
+    display: none;
+  }
+}

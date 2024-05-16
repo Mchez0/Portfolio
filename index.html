@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dennis J Mutua - Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+  <header>
+    <div class="menu-toggle">&#9776;</div>
+    <h1>DENNIS J MUTUA</h1>
+    <nav>
+        <div class="nav-placeholder">
+            <a href="#" class="nav-link">MENU</a>
+            <div class="dropdown-menu">
+              <a href="#" class="nav-link">ABOUT</a>
+              <a href="#" class="nav-link">PORTFOLIO</a>
+              <a href="#" class="nav-link">CONTACT</a>
+            </div>
+       </div>
+      <ul>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>ABOUT ME</h2>
+    <p>I am a passionate pretend web developer with barely any experience in HTML, CSS, and JavaScript.</p>
+  </section>
+
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="portfolio-item">
+      <img src="Project1.jpg" alt="Project 1">
+      <h3>Project Alpha</h3>
+      <p>Description of Project Alpha</p>
+    </div>
+    <div class="portfolio-item">
+      <img src="Project2.jpg" alt="Project 2">
+      <h3>Project Beta</h3>
+      <p>Description of Project Beta</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Dennis J Mutua</p>
+  </footer>
+  <script src="portfolio.js"></script>
+</body>
+</html>
